@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,65 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyboardManagerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9s-Zh-ElS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-Cv-APj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Try here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVX-sm-5tA">
+                                                <rect key="frame" x="30" y="313.5" width="315" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="LBz-tJ-GWv"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Try here too" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJE-d0-t6u">
+                                                <rect key="frame" x="30" y="577" width="315" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Ma0-lr-pfg"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="yVX-sm-5tA" firstAttribute="leading" secondItem="3qe-Cv-APj" secondAttribute="leading" constant="30" id="CZm-Nk-fDC"/>
+                                            <constraint firstAttribute="trailing" secondItem="yVX-sm-5tA" secondAttribute="trailing" constant="30" id="EeJ-f0-2p0"/>
+                                            <constraint firstItem="aJE-d0-t6u" firstAttribute="leading" secondItem="3qe-Cv-APj" secondAttribute="leading" constant="30" id="bhM-pD-Qa1"/>
+                                            <constraint firstItem="yVX-sm-5tA" firstAttribute="centerY" secondItem="3qe-Cv-APj" secondAttribute="centerY" id="d7S-Lb-qgN"/>
+                                            <constraint firstItem="yVX-sm-5tA" firstAttribute="centerX" secondItem="3qe-Cv-APj" secondAttribute="centerX" id="t2s-94-xkJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="aJE-d0-t6u" secondAttribute="trailing" constant="30" id="uON-yl-Ouh"/>
+                                            <constraint firstAttribute="bottom" secondItem="aJE-d0-t6u" secondAttribute="bottom" constant="50" id="zkd-S4-eYh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3qe-Cv-APj" secondAttribute="bottom" id="7G7-aw-0t1"/>
+                                    <constraint firstItem="3qe-Cv-APj" firstAttribute="height" secondItem="E9s-Zh-ElS" secondAttribute="height" id="BRF-8D-k5A"/>
+                                    <constraint firstItem="3qe-Cv-APj" firstAttribute="top" secondItem="E9s-Zh-ElS" secondAttribute="top" id="IoX-7P-Q2R"/>
+                                    <constraint firstItem="3qe-Cv-APj" firstAttribute="leading" secondItem="E9s-Zh-ElS" secondAttribute="leading" id="K6a-LF-TPQ"/>
+                                    <constraint firstItem="3qe-Cv-APj" firstAttribute="width" secondItem="E9s-Zh-ElS" secondAttribute="width" id="hwA-Ac-r6z"/>
+                                    <constraint firstAttribute="trailing" secondItem="3qe-Cv-APj" secondAttribute="trailing" id="pLX-bE-WJr"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="E9s-Zh-ElS" secondAttribute="bottom" id="4E4-u3-pi2"/>
+                            <constraint firstItem="E9s-Zh-ElS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N1J-1B-p4X"/>
+                            <constraint firstAttribute="trailing" secondItem="E9s-Zh-ElS" secondAttribute="trailing" id="Rer-mG-91h"/>
+                            <constraint firstItem="E9s-Zh-ElS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zoh-YM-tfI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

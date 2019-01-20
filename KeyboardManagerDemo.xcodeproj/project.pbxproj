@@ -12,6 +12,7 @@
 		818C53C121F490930025B6B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818C53BF21F490930025B6B9 /* Main.storyboard */; };
 		818C53C321F4909C0025B6B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818C53C221F4909C0025B6B9 /* Assets.xcassets */; };
 		818C53C621F4909C0025B6B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818C53C421F4909C0025B6B9 /* LaunchScreen.storyboard */; };
+		818C53CE21F491640025B6B9 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818C53CD21F491640025B6B9 /* KeyboardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		818C53C221F4909C0025B6B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		818C53C521F4909C0025B6B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		818C53C721F4909C0025B6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		818C53CD21F491640025B6B9 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				818C53BB21F490930025B6B9 /* AppDelegate.swift */,
+				818C53CD21F491640025B6B9 /* KeyboardManager.swift */,
 				818C53BD21F490930025B6B9 /* ViewController.swift */,
 				818C53BF21F490930025B6B9 /* Main.storyboard */,
 				818C53C221F4909C0025B6B9 /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			files = (
 				818C53BE21F490930025B6B9 /* ViewController.swift in Sources */,
 				818C53BC21F490930025B6B9 /* AppDelegate.swift in Sources */,
+				818C53CE21F491640025B6B9 /* KeyboardManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
