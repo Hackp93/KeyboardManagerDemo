@@ -25,6 +25,10 @@ class KeyboardManager: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
     
+    private override init() {
+        super.init()
+    }
+    
     private func initializeManager(){
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
