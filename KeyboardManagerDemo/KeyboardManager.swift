@@ -9,7 +9,7 @@
 import UIKit
 
 class KeyboardManager: NSObject {
-
+    
     static var shared =  KeyboardManager()
     var isEnabled  =  false {
         didSet {
@@ -51,13 +51,8 @@ class KeyboardManager: NSObject {
     
     private func getScrollView(forView view : UIView)->UIScrollView? {
         
-        for subview in view.subviews {
-            
-            if let scrollview = subview as? UIScrollView {
-                return scrollview
-            } else {
-                return getScrollView(forView: subview)
-            }
+        if let textFieldorTextView = view.firstResponder {
+            return textFieldorTextView.getSuperScrollView()
         }
         return nil
     }
@@ -90,5 +85,28 @@ extension UITextView {
     
     @objc private func onClickDone(_ sender : UIBarButtonItem){
         resignFirstResponder()
+    }
+}
+
+extension UIView {
+    var firstResponder: UIView? {
+        guard !isFirstResponder else { return self }
+        
+        for subview in subviews {
+            if let firstResponder = subview.firstResponder {
+                return firstResponder
+            }
+        }
+        
+        return nil
+    }
+    
+    func getSuperScrollView()->UIScrollView?{
+        if let scrollView = self as? UIScrollView {
+            if (scrollView as? UITextView) == nil {
+                return scrollView
+            }
+        }
+        return superview?.getSuperScrollView()
     }
 }
